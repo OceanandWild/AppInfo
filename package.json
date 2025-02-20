@@ -1,0 +1,29 @@
+{
+  "name": "password-protected-app-info",
+  "description": "API protegida con contraseña usando Express y CORS",
+  "version": "1.0.0",
+  "build": {
+    "command": "npm install",
+    "output": "./"
+  },
+  "deploy": {
+    "provider": "Render",
+    "region": "us-east-1",
+    "plan": "free",
+    "startCommand": "node validate-password.js"
+  },
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "3000",
+    "ADMIN_PASSWORD": "10903cx"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5"
+  },
+  "frontend": {
+    "framework": "Vanilla JS",
+    "styles": "CSS puro",
+    "entry": "index.html"
+  }
+}
